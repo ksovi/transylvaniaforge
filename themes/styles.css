@@ -53,7 +53,7 @@ body {
     font-family: var(--font-body);
     color: var(--color-text);
 
-    background-image: url('hero_3.png');
+    background-image: url('../images/background/hero.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
@@ -587,7 +587,7 @@ section::before {
    ========================================================= */
 @media (max-width: 700px) and (orientation: portrait) {
     body {
-        background-image: url('hero-mobile.png');
+        background-image: url('../images/background/hero-mobile.png');
         background-size: cover;
         background-position: center top;
         background-attachment: scroll; /* better for mobile performance */
@@ -599,7 +599,7 @@ section::before {
 }
 @media (max-width: 700px) and (orientation: landscape) {
     body {
-        background-image: url('hero-mobile.png'); /* desktop version */
+        background-image: url('../images/background/hero-mobile.png'); /* desktop version */
         background-size: cover;
         background-position: center;
     }
