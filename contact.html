@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – Transylvania Forge</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Back buttons -->
+  <div class="back-wrapper">
+      <a href="index.html" class="back-btn">← Înapoi la Pagina Principală</a>
+  </div>
+  <div class="back-wrapper">
+      <a href="mobilier.html" class="back-btn">← Înapoi la Mobilier</a>
+  </div>
+
+  <div class="page-wrapper">
+
+    <section class="contact">
+      <div class="container">
+
+        <h2 class="section-title">Cere o Ofertă Personalizată</h2>
+
+        <form id="contactForm" action="https://formspree.io/f/xyknvwge" method="POST">
+
+          <div class="form-row">
+              <input type="text" name="name" placeholder="Nume" required>
+              <input type="email" name="email" placeholder="Email" required>
+          </div>
+
+          <div class="form-row">
+              <input type="text" name="phone" placeholder="Telefon">
+              <input type="text" name="subject" placeholder="Subiect">
+          </div>
+
+          <textarea name="message" placeholder="Mesajul tău" required></textarea>
+
+          <button class="btn btn-primary" type="submit">Trimite</button>
+        </form>
+
+        <!-- Success Popup -->
+        <div id="successPopup" class="success-popup">
+          <div class="popup-content">
+              <h3>Mesaj trimis!</h3>
+              <p>Îți mulțumim! Te vom contacta în curând.</p>
+              <button id="closePopup" class="btn btn-primary">Închide</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- JS for validation + popup -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contactForm");
+    const popup = document.querySelector(".success-popup");
+    const closeBtn = document.getElementById("closePopup");
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault(); // stop page reload
+
+        // Show popup
+        popup.style.display = "flex";
+
+        // Reset form fields
+        form.reset();
+    });
+
+    // Close popup
+    closeBtn.addEventListener("click", () => {
+        popup.style.display = "none";
+    });
+
+    // Close popup when clicking outside the box
+    popup.addEventListener("click", (e) => {
+        if (e.target === popup) {
+            popup.style.display = "none";
+        }
+    });
+});
+</script>
+
+</body>
+</html>
+

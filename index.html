@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forge Company</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="company-name">Transylvanian Forge</h1>
+            <p class="tagline">DESIGN DIN FIER ȘI LEMN LUCRAT MANUAL</p>
+
+            <div class="hero-content">
+                <h2 class="hero-title">Artă funcțională din fier forjat și lemn masiv</h2>
+                <p class="hero-description">
+                    Mobilier, scări și decorațiuni create manual<br>
+                    pentru un stil rustic‑industrial autentic
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-outline">Vezi Galeria</button>
+                    <button class="btn btn-primary">Cere Ofertă →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<div class="divider-metal"></div>
+
+<!-- Services Section -->
+<section class="services">
+    <div class="container">
+        <h2 class="section-title">Ce Realizăm</h2>
+
+        <div class="services-grid">
+
+            <!-- Iron & Wood Furniture (clickable) -->
+            <a href="mobilier.html" class="service-card">
+                <img src="furniture.png" alt="Mobilier din Fier și Lemn">
+                <h3>Mobilier din Fier și Lemn</h3>
+            </a>
+
+            <!-- Lighting -->
+            <div class="service-card">
+                <img src="lighting.png" alt="Corpuri de Iluminat">
+                <h3>Corpuri de Iluminat</h3>
+            </div>
+
+            <!-- Stairs -->
+            <div class="service-card">
+                <img src="stairs.png" alt="Scări Interioare">
+                <h3>Scări Interioare</h3>
+            </div>
+
+            <!-- Decorative -->
+            <div class="service-card">
+                <img src="decor.png" alt="Accesorii Decorative">
+                <h3>Accesorii Decorative</h3>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="divider-metal"></div>
+
+<!-- Recent Projects -->
+<section class="projects">
+    <div class="container">
+        <h2 class="section-title">Proiecte Recente</h2>
+
+        <div class="projects-grid">
+            <div class="project-item"><img src="project1.png" alt=""></div>
+            <div class="project-item"><img src="project2.png" alt=""></div>
+            <div class="project-item"><img src="project3.png" alt=""></div>
+        </div>
+
+        <button class="btn btn-outline center-btn">Vezi Mai Multe Proiecte →</button>
+    </div>
+</section>
+
+<div class="divider-metal"></div>
+
+<!-- Features Section -->
+<section class="features">
+    <div class="container">
+        <h2 class="section-title">De Ce Să Ne Alegi?</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">★</div>
+                <h3>+250 Proiecte</h3>
+                <p>Experiență în lucrări mici și mari</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">🔨</div>
+                <h3>Design Personalizat</h3>
+                <p>Construim exact ceea ce îți dorești</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">⚙️</div>
+                <h3>Finisaje Premium</h3>
+                <p>Materiale de înaltă calitate</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">🚚</div>
+                <h3>Montaj Profesional</h3>
+                <p>Livrare și asamblare incluse</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider-metal"></div>
+
+<!-- Contact Form -->
+<section class="contact">
+    <div class="container">
+        <h2 class="section-title">Cere o Ofertă Personalizată</h2>
+
+<form id="contactForm" action="https://formspree.io/f/xyknvwge" method="POST">
+
+    <div class="form-row">
+        <input type="text" name="name" placeholder="Nume" required>
+        <input type="email" name="email" placeholder="Email" required>
+    </div>
+
+    <div class="form-row">
+        <input type="text" name="phone" placeholder="Telefon">
+        <input type="text" name="subject" placeholder="Subiect">
+    </div>
+
+    <textarea name="message" placeholder="Mesajul tău" required></textarea>
+
+    <button class="btn btn-primary" type="submit">Trimite</button>
+</form>
+
+<!-- Success Popup -->
+<div id="successPopup" class="success-popup">
+    <div class="popup-content">
+        <h3>Mesaj trimis!</h3>
+        <p>Îți mulțumim! Te vom contacta în curând.</p>
+        <button id="closePopup" class="btn btn-primary">Închide</button>
+    </div>
+</div>
+
+    </div>
+</section>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+
+    // Basic validation
+    if (!form.name.value.trim() || !form.email.value.trim() || !form.message.value.trim()) {
+        alert("Te rugăm să completezi toate câmpurile obligatorii.");
+        return;
+    }
+
+    // Send form to Formspree
+    const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { "Accept": "application/json" }
+    });
+
+    if (response.ok) {
+        // Show success popup
+        document.getElementById("successPopup").style.display = "flex";
+        form.reset();
+    } else {
+        alert("A apărut o eroare. Te rugăm să încerci din nou.");
+    }
+});
+
+// Close popup
+document.getElementById("closePopup").addEventListener("click", function() {
+    document.getElementById("successPopup").style.display = "none";
+});
+</script>
+
+</body>
+</html>
+
