@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact – Transylvania Forge</title>
+  <title>Contact Transylvania Forge – Comenzi Mobilier Personalizat</title>
+<meta name="description" content="Cere o ofertă pentru mobilier, scări sau accesorii decorative din fier forjat și lemn masiv. Proiecte personalizate, lucrate manual în atelierul nostru.">
   <link rel="stylesheet" href="../themes/styles.css">
 </head>
 
@@ -82,7 +83,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 </script>
-
+<div id="footer-include"></div>
+<script>
+  fetch("../includes/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-include").innerHTML = data;
+    });
+</script>
 </body>
 </html>
 

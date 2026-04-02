@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mobilier din Fier Forjat și Lemn Masiv – Transylvania Forge</title>
-<meta name="description" content="Mese, birouri, rafturi și mobilier personalizat din fier forjat și lemn masiv. Piese lucrate manual, cu design rustic‑industrial și finisaje premium.">
-
+  <title>Scări Interioare din Fier Forjat & Lemn Masiv – Transylvania Forge</title>
+<meta name="description" content="Scări interioare personalizate din fier forjat și lemn masiv. Balustrade, trepte și structuri lucrate manual, adaptate oricărui spațiu. Design premium și durabil.">
   <link rel="stylesheet" href="../themes/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
 </head>
@@ -15,7 +14,7 @@
 
     <!-- PAGE TITLE -->
     <header class="subpage-hero">
-      <h1>Mobilier din Fier și Lemn</h1>
+      <h1>Scări Interioare</h1>
     </header>
 
     <!-- TEXT SECTION -->
@@ -23,21 +22,21 @@
       <h2>Procesul Nostru de Lucru</h2>
 
       <p>
-        Fiecare piesă de mobilier pe care o realizăm este lucrată manual, folosind fier forjat și lemn masiv.
-        Proiectăm și construim fiecare element cu atenție la durabilitate, autenticitate și caracterul rustic‑industrial.
+        Scările interioare realizate în atelierul nostru îmbină rezistența fierului forjat cu eleganța lemnului masiv.
+        Fiecare treaptă, balustradă și element structural este lucrat manual, cu atenție la detalii și la siguranță.
       </p>
 
       <p>
-        Indiferent dacă ai nevoie de o masă de dining, rafturi, un birou sau structuri interioare personalizate,
-        lucrăm împreună cu tine pentru a înțelege spațiul, stilul și nevoile tale funcționale.
+        Realizăm scări pentru locuințe, spații comerciale și proiecte arhitecturale personalizate.
+        Lucrăm împreună cu tine pentru a adapta designul la stilul interior, la spațiu și la funcționalitate.
       </p>
 
       <p>
-        Poți solicita dimensiuni personalizate, finisaje, tipuri de lemn și texturi ale fierului.
-        Trimite-ne ideile tale, schițe sau fotografii de inspirație — le transformăm într-o piesă unică, realizată manual.
+        Poți alege tipul de lemn, textura fierului, modelul balustradei și finisajele.
+        Trimite-ne ideile tale sau fotografii de inspirație — le transformăm într-o structură solidă și estetică.
       </p>
 
-      <a href="contact.html" class="back-btn">Cere Mobilier Personalizat</a>
+      <a href="contact.html" class="back-btn">Cere O Scară Personalizată</a>
     </section>
 
     <!-- Back to home button -->
@@ -53,9 +52,9 @@
       <h2>Galerie Proiecte</h2>
 
       <div class="gallery-grid">
-        <img src="../images/mobilier/table-simple.png" class="gallery-img" alt="">
-        <img src="../images/mobilier/table-room-1.png" class="gallery-img" alt="">
-        <img src="../images/mobilier/table-room-2.png" class="gallery-img" alt="">
+        <img src="../images/scari/scara-1.png" class="gallery-img" alt="">
+        <img src="../images/scari/scara-2.png" class="gallery-img" alt="">
+        <img src="../images/scari/scara-3.png" class="gallery-img" alt="">
       </div>
     </section>
 
@@ -98,17 +97,14 @@ document.addEventListener("DOMContentLoaded", () => {
         lightboxImg.src = images[currentIndex].src;
     }
 
-    // Click on thumbnails
     images.forEach((img, index) => {
         img.addEventListener("click", () => openLightbox(index));
     });
 
-    // Click outside image closes
     lightbox.addEventListener("click", (e) => {
         if (e.target === lightbox) closeLightbox();
     });
 
-    // Arrow buttons
     nextBtn.addEventListener("click", (e) => {
         e.stopPropagation();
         showNext();
@@ -119,7 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
         showPrev();
     });
 
-    // Keyboard navigation
     document.addEventListener("keydown", (e) => {
         if (lightbox.style.display === "flex") {
             if (e.key === "ArrowRight") showNext();
@@ -137,6 +132,13 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("footer-include").innerHTML = data;
     });
 </script>
+<div id="footer-include"></div>
+<script>
+  fetch("../includes/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-include").innerHTML = data;
+    });
+</script>
 </body>
 </html>
-

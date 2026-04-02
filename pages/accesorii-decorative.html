@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mobilier din Fier Forjat și Lemn Masiv – Transylvania Forge</title>
-<meta name="description" content="Mese, birouri, rafturi și mobilier personalizat din fier forjat și lemn masiv. Piese lucrate manual, cu design rustic‑industrial și finisaje premium.">
-
+  <title>Accesorii Decorative din Fier Forjat – Transylvania Forge</title>
+<meta name="description" content="Accesorii decorative unicat din fier forjat și lemn masiv: rame, suporturi, elemente murale și decoruri personalizate. Lucrate manual în stil rustic‑industrial.">
   <link rel="stylesheet" href="../themes/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
 </head>
@@ -15,7 +14,7 @@
 
     <!-- PAGE TITLE -->
     <header class="subpage-hero">
-      <h1>Mobilier din Fier și Lemn</h1>
+      <h1>Accesorii Decorative</h1>
     </header>
 
     <!-- TEXT SECTION -->
@@ -23,21 +22,21 @@
       <h2>Procesul Nostru de Lucru</h2>
 
       <p>
-        Fiecare piesă de mobilier pe care o realizăm este lucrată manual, folosind fier forjat și lemn masiv.
-        Proiectăm și construim fiecare element cu atenție la durabilitate, autenticitate și caracterul rustic‑industrial.
+        Accesoriile decorative realizate în atelierul nostru aduc un plus de caracter oricărui spațiu.
+        Fiecare piesă este lucrată manual din fier forjat și lemn masiv, păstrând textura naturală și patina materialelor.
       </p>
 
       <p>
-        Indiferent dacă ai nevoie de o masă de dining, rafturi, un birou sau structuri interioare personalizate,
-        lucrăm împreună cu tine pentru a înțelege spațiul, stilul și nevoile tale funcționale.
+        Creăm suporturi, rame, elemente murale, console, decoruri pentru interior și exterior —
+        toate personalizate în funcție de stilul și nevoile tale.
       </p>
 
       <p>
-        Poți solicita dimensiuni personalizate, finisaje, tipuri de lemn și texturi ale fierului.
-        Trimite-ne ideile tale, schițe sau fotografii de inspirație — le transformăm într-o piesă unică, realizată manual.
+        Poți alege dimensiunile, tipul de lemn, modelul metalic și finisajele.
+        Trimite-ne o idee sau o fotografie — o transformăm într-un obiect decorativ unic.
       </p>
 
-      <a href="contact.html" class="back-btn">Cere Mobilier Personalizat</a>
+      <a href="contact.html" class="back-btn">Cere Accesorii Personalizate</a>
     </section>
 
     <!-- Back to home button -->
@@ -53,9 +52,9 @@
       <h2>Galerie Proiecte</h2>
 
       <div class="gallery-grid">
-        <img src="../images/mobilier/table-simple.png" class="gallery-img" alt="">
-        <img src="../images/mobilier/table-room-1.png" class="gallery-img" alt="">
-        <img src="../images/mobilier/table-room-2.png" class="gallery-img" alt="">
+        <img src="../images/decor/decor-1.png" class="gallery-img" alt="">
+        <img src="../images/decor/decor-2.png" class="gallery-img" alt="">
+        <img src="../images/decor/decor-3.png" class="gallery-img" alt="">
       </div>
     </section>
 
@@ -98,17 +97,14 @@ document.addEventListener("DOMContentLoaded", () => {
         lightboxImg.src = images[currentIndex].src;
     }
 
-    // Click on thumbnails
     images.forEach((img, index) => {
         img.addEventListener("click", () => openLightbox(index));
     });
 
-    // Click outside image closes
     lightbox.addEventListener("click", (e) => {
         if (e.target === lightbox) closeLightbox();
     });
 
-    // Arrow buttons
     nextBtn.addEventListener("click", (e) => {
         e.stopPropagation();
         showNext();
@@ -119,7 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
         showPrev();
     });
 
-    // Keyboard navigation
     document.addEventListener("keydown", (e) => {
         if (lightbox.style.display === "flex") {
             if (e.key === "ArrowRight") showNext();
@@ -128,6 +123,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+</script>
+</script>
+<div id="footer-include"></div>
+<script>
+  fetch("../includes/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-include").innerHTML = data;
+    });
 </script>
 <div id="footer-include"></div>
 <script>
@@ -139,4 +143,3 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
-
