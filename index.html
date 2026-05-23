@@ -4,124 +4,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transylvanian Forge – Mobilier și Design din Fier Forjat & Lemn Masiv</title>
-<meta name="description" content="Mobilier, scări și accesorii lucrate manual din fier forjat și lemn masiv. Piese personalizate în stil rustic‑industrial, create în atelierul Transylvania Forge.">
-
+    <meta name="description" content="Mobilier, scări și accesorii lucrate manual din fier forjat și lemn masiv. Piese personalizate în stil rustic‑industrial, create în atelierul Transylvanian Forge.">
     <link rel="stylesheet" href="themes/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1 class="company-name">Transylvanian Forge</h1>
-            <p class="tagline">DESIGN DIN FIER ȘI LEMN LUCRAT MANUAL</p>
+<!-- ===================== NAV ===================== -->
+<nav class="site-nav" id="siteNav">
+    <a href="index.html" class="nav-logo">Transylvanian Forge</a>
 
-            <div class="hero-content">
-                <h2 class="hero-title">Artă funcțională din fier forjat și lemn masiv</h2>
-                <p class="hero-description">
-                    Mobilier, scări și decorațiuni create manual<br>
-                    pentru un stil rustic‑industrial autentic
-                </p>
-                <div class="hero-buttons">
-                    <button class="btn btn-outline" onclick="location.href='pages/termeni.html'">Termeni & Condiții</button>
-                    <button class="btn btn-primary" onclick="location.href='pages/contact.html'">Cere Ofertă →</button>
-                </div>
-            </div>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#services">Ce Realizăm</a></li>
+        <li><a href="#about">Atelier</a></li>
+        <li><a href="#features">De Ce Noi</a></li>
+        <li><a href="#contact" class="nav-cta">Cere Ofertă</a></li>
+    </ul>
+
+    <div class="nav-toggle" id="navToggle" aria-label="Meniu">
+        <span></span><span></span><span></span>
+    </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+
+    <div class="container">
+        <div class="hero-ornament">
+            <div class="hero-ornament-line"></div>
+            <div class="hero-ornament-diamond"></div>
+            <div class="hero-ornament-line"></div>
         </div>
-    </section>
+
+        <h1 class="company-name">Transylvanian Forge</h1>
+        <p class="tagline">Design din fier și lemn lucrat manual</p>
+        <div class="hero-divider"></div>
+
+        <h2 class="hero-title">Artă funcțională din fier forjat și lemn masiv</h2>
+        <p class="hero-description">
+            Mobilier, scări și decorațiuni create manual<br>
+            pentru un stil rustic‑industrial autentic
+        </p>
+
+        <div class="hero-buttons">
+            <a href="pages/termeni.html" class="btn btn-outline">Termeni & Condiții</a>
+            <a href="#contact" class="btn btn-primary">Cere Ofertă →</a>
+        </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+        <span>Descoperă</span>
+        <div class="scroll-arrow"></div>
+    </div>
+</section>
 
 <div class="divider-metal"></div>
 
-<!-- Services Section -->
-<section class="services">
+<!-- ===================== SERVICES ===================== -->
+<section class="services" id="services">
     <div class="container">
-        <h2 class="section-title">Ce Realizăm</h2>
+        <h2 class="section-title reveal">Ce Realizăm</h2>
+        <p class="section-subtitle reveal reveal-delay-1">Fiecare piesă, lucrată manual în atelierul nostru</p>
 
         <div class="services-grid">
-
-            <!-- Iron & Wood Furniture (clickable) -->
-            <a href="pages/mobilier.html" class="service-card">
+            <a href="pages/mobilier.html" class="service-card reveal reveal-delay-1">
                 <img src="furniture.png" alt="Mobilier din Fier și Lemn">
+                <div class="service-card-overlay"></div>
                 <h3>Mobilier din Fier și Lemn</h3>
+                <div class="service-card-arrow">→</div>
             </a>
 
-            <!-- Lighting -->
-            <a href="pages/ci.html" class="service-card">
+            <a href="pages/ci.html" class="service-card reveal reveal-delay-2">
                 <img src="lighting.png" alt="Corpuri de Iluminat">
+                <div class="service-card-overlay"></div>
                 <h3>Corpuri de Iluminat</h3>
+                <div class="service-card-arrow">→</div>
             </a>
 
-            <!-- Stairs -->
-             <a href="pages/scari-interioare.html" class="service-card">
+            <a href="pages/scari-interioare.html" class="service-card reveal reveal-delay-3">
                 <img src="stairs.png" alt="Scări Interioare">
+                <div class="service-card-overlay"></div>
                 <h3>Scări Interioare</h3>
+                <div class="service-card-arrow">→</div>
             </a>
 
-            <!-- Decorative -->
-            <a href="pages/accesorii-decorative.html" class="service-card">
+            <a href="pages/accesorii-decorative.html" class="service-card reveal reveal-delay-4">
                 <img src="decor.png" alt="Accesorii Decorative">
+                <div class="service-card-overlay"></div>
                 <h3>Accesorii Decorative</h3>
+                <div class="service-card-arrow">→</div>
             </a>
-
         </div>
     </div>
 </section>
 
 <div class="divider-metal"></div>
 
-<section class="about">
-    <div class="container">
+<!-- ===================== ABOUT ===================== -->
+<section class="about" id="about">
+    <div class="about-inner">
+        <div class="about-image-wrap reveal">
+            <img src="images/despre-atelier/hero-uti-2.png" alt="Meșter fierar" class="about-image">
+        </div>
 
-        <img src="images/despre-atelier/hero-uti-2.png" alt="Meșter fierar" class="about-image">
+        <div class="about-content reveal reveal-delay-2">
+            <span class="about-eyebrow">Despre Atelier</span>
+            <h2 class="section-title">Fierul și Lemnul<br>prind formă</h2>
 
-        <h2 class="section-title">Despre Atelier</h2>
+            <p class="about-text">
+                Transylvanian Forge este un atelier unde fierul și lemnul prind formă sub mâinile meșterilor.
+                Fiecare piesă este lucrată manual, cu răbdare și precizie, folosind materiale naturale
+                și tehnici tradiționale reinterpretate într-o estetică modernă.
+            </p>
 
-        <p class="about-text">
-            Transylvania Forge este un atelier unde fierul și lemnul prind formă sub mâinile meșterilor.
-            Fiecare piesă este lucrată manual, cu răbdare și precizie, folosind materiale naturale
-            și tehnici tradiționale reinterpretate într-o estetică modernă.
-        </p>
+            <p class="about-text">
+                Nu lucrăm în serie. Fiecare proiect este unic — creat pentru spațiul tău, pentru stilul tău
+                și pentru modul în care vrei să trăiești cu obiectele din jurul tău.
+            </p>
 
-        <p class="about-text">
-            Nu lucrăm în serie. Fiecare proiect este unic — creat pentru spațiul tău, pentru stilul tău
-            și pentru modul în care vrei să trăiești cu obiectele din jurul tău. Aici, designul nu este
-            doar funcțional, ci și o expresie a caracterului.
-        </p>
-
+            <a href="#contact" class="btn btn-outline">Discută cu noi →</a>
+        </div>
     </div>
 </section>
 
-
-
 <div class="divider-metal"></div>
 
-<!-- Features Section -->
-<section class="features">
+<!-- ===================== FEATURES ===================== -->
+<section class="features" id="features">
     <div class="container">
-        <h2 class="section-title">De Ce Să Ne Alegi?</h2>
+        <h2 class="section-title reveal">De Ce Să Ne Alegi?</h2>
+        <p class="section-subtitle reveal reveal-delay-1">Calitate și caracter în fiecare detaliu</p>
 
         <div class="features-grid">
-            <div class="feature-item">
-                <div class="feature-icon">★</div>
+            <div class="feature-item reveal reveal-delay-1">
+                <span class="feature-icon">★</span>
                 <h3>+250 Proiecte</h3>
                 <p>Experiență în lucrări mici și mari</p>
             </div>
-
-            <div class="feature-item">
-                <div class="feature-icon">🔨</div>
+            <div class="feature-item reveal reveal-delay-2">
+                <span class="feature-icon">🔨</span>
                 <h3>Design Personalizat</h3>
                 <p>Construim exact ceea ce îți dorești</p>
             </div>
-
-            <div class="feature-item">
-                <div class="feature-icon">⚙️</div>
+            <div class="feature-item reveal reveal-delay-3">
+                <span class="feature-icon">⚙️</span>
                 <h3>Finisaje Premium</h3>
                 <p>Materiale de înaltă calitate</p>
             </div>
-
-            <div class="feature-item">
-                <div class="feature-icon">🚚</div>
+            <div class="feature-item reveal reveal-delay-4">
+                <span class="feature-icon">🚚</span>
                 <h3>Montaj Profesional</h3>
                 <p>Livrare și asamblare incluse</p>
             </div>
@@ -131,113 +164,144 @@
 
 <div class="divider-metal"></div>
 
-<!-- Contact Form -->
-<section class="contact">
+<!-- ===================== CONTACT ===================== -->
+<section class="contact" id="contact">
     <div class="container">
-        <h2 class="section-title">Cere o Ofertă Personalizată</h2>
+        <h2 class="section-title reveal">Cere o Ofertă Personalizată</h2>
+        <p class="section-subtitle reveal reveal-delay-1">Spune-ne despre proiectul tău — îl facem realitate</p>
 
-<form id="contactForm" action="https://formspree.io/f/xyknvwge" method="POST">
+        <form id="contactForm" action="https://formspree.io/f/xyknvwge" method="POST" class="reveal reveal-delay-2">
+            <div class="form-row">
+                <input type="text" name="name" placeholder="Nume" required>
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-row">
+                <input type="text" name="phone" placeholder="Telefon">
+                <input type="text" name="subject" placeholder="Subiect">
+            </div>
+            <textarea name="message" placeholder="Mesajul tău — dimensiuni, materiale, inspirație..." required></textarea>
+            <button class="btn btn-primary" type="submit">Trimite Mesajul</button>
+        </form>
 
-    <div class="form-row">
-        <input type="text" name="name" placeholder="Nume" required>
-        <input type="email" name="email" placeholder="Email" required>
-    </div>
-
-    <div class="form-row">
-        <input type="text" name="phone" placeholder="Telefon">
-        <input type="text" name="subject" placeholder="Subiect">
-    </div>
-
-    <textarea name="message" placeholder="Mesajul tău" required></textarea>
-
-    <button class="btn btn-primary" type="submit">Trimite</button>
-</form>
-
-<!-- Success Popup -->
-<div id="successPopup" class="success-popup">
-    <div class="popup-content">
-        <h3>Mesaj trimis!</h3>
-        <p>Îți mulțumim! Te vom contacta în curând.</p>
-        <button id="closePopup" class="btn btn-primary">Închide</button>
-    </div>
-</div>
-
+        <div id="successPopup" class="success-popup">
+            <div class="popup-content">
+                <h3>Mesaj trimis!</h3>
+                <p>Îți mulțumim! Te vom contacta în curând.</p>
+                <button id="closePopup" class="btn btn-primary">Închide</button>
+            </div>
+        </div>
     </div>
 </section>
 
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3 class="footer-title">Transylvanian Forge</h3>
+            <p class="footer-text">
+                Mobilier, scări și accesorii lucrate manual din fier forjat și lemn masiv.
+                Piese personalizate în stil rustic‑industrial.
+            </p>
+        </div>
+        <div class="footer-section">
+            <h4>Linkuri utile</h4>
+            <ul class="footer-links">
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="pages/mobilier.html">Mobilier</a></li>
+                <li><a href="pages/ci.html">Corpuri de Iluminat</a></li>
+                <li><a href="pages/scari-interioare.html">Scări Interioare</a></li>
+                <li><a href="pages/accesorii-decorative.html">Accesorii Decorative</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+                <li><a href="pages/termeni.html">Termeni și Condiții</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p class="footer-text">
+                Email: contact@transylvanianforge.ro<br>
+                Program: Luni–Vineri, 09:00–17:00
+            </p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Transylvanian Forge. Toate drepturile rezervate.</p>
+    </div>
+</footer>
+
+<!-- ===================== SCRIPTS ===================== -->
 <script>
+/* --- Nav scroll --- */
+const nav = document.getElementById('siteNav');
+window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+/* --- Mobile nav toggle --- */
+const toggle = document.getElementById('navToggle');
+const links  = document.getElementById('navLinks');
+toggle.addEventListener('click', () => {
+    links.classList.toggle('open');
+});
+links.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => links.classList.remove('open'));
+});
+
+/* --- Subtle parallax on hero bg --- */
+const heroBg = document.getElementById('heroBg');
+window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (heroBg && y < window.innerHeight * 1.5) {
+        heroBg.style.transform = `scale(1.06) translateY(${y * 0.22}px)`;
+    }
+}, { passive: true });
+
+/* --- Scroll reveal --- */
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+        if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            observer.unobserve(e.target);
+        }
+    });
+}, { threshold: 0.12 });
+reveals.forEach(el => observer.observe(el));
+
+/* --- Contact form --- */
 document.getElementById("contactForm").addEventListener("submit", async function(e) {
     e.preventDefault();
-
     const form = e.target;
-
-    // Basic validation
     if (!form.name.value.trim() || !form.email.value.trim() || !form.message.value.trim()) {
         alert("Te rugăm să completezi toate câmpurile obligatorii.");
         return;
     }
-
-    // Send form to Formspree
     const response = await fetch(form.action, {
         method: "POST",
         body: new FormData(form),
         headers: { "Accept": "application/json" }
     });
-
     if (response.ok) {
-        // Show success popup
         document.getElementById("successPopup").style.display = "flex";
         form.reset();
     } else {
         alert("A apărut o eroare. Te rugăm să încerci din nou.");
     }
 });
-
-// Close popup
 document.getElementById("closePopup").addEventListener("click", function() {
     document.getElementById("successPopup").style.display = "none";
 });
 
+/* --- Smooth scroll for anchor links --- */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
 </script>
-<footer class="site-footer">
-  <div class="footer-container">
-
-    <div class="footer-section">
-      <h3 class="footer-title">Transylvania Forge</h3>
-      <p class="footer-text">
-        Mobilier, scări și accesorii lucrate manual din fier forjat și lemn masiv.
-        Piese personalizate în stil rustic‑industrial.
-      </p>
-    </div>
-
-    <div class="footer-section">
-      <h4>Linkuri utile</h4>
-      <ul class="footer-links">
-        <li><a href="index.html">Acasă</a></li>
-        <li><a href="pages/mobilier.html">Mobilier</a></li>
-        <li><a href="pages/scari-interioare.html">Scări Interioare</a></li>
-        <li><a href="pages/accesorii-decorative.html">Accesorii Decorative</a></li>
-        <li><a href="pages/contact.html">Contact</a></li>
-        <li><a href="pages/termeni.html">Termeni și Condiții</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-section">
-      <h4>Contact</h4>
-      <p class="footer-text">
-        Email: contact@transylvaniaforge.ro<br>
-        Program: Luni–Vineri, 09:00–17:00
-      </p>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2024 Transylvania Forge. Toate drepturile rezervate.</p>
-  </div>
-</footer>
-
 
 </body>
 </html>
-
