@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html lang="ro">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Transylvania Forge – Comenzi Mobilier Personalizat</title>
-<meta name="description" content="Cere o ofertă pentru mobilier, scări sau accesorii decorative din fier forjat și lemn masiv. Proiecte personalizate, lucrate manual în atelierul nostru.">
+  <meta name="description"
+    content="Cere o ofertă pentru mobilier, scări sau accesorii decorative din fier forjat și lemn masiv. Proiecte personalizate, lucrate manual în atelierul nostru.">
   <link rel="stylesheet" href="../themes/styles.css">
 </head>
 
 <body>
+  <!-- ===================== NAV ===================== -->
+  <nav class="site-nav" id="siteNav">
+    <a href="../index.html" class="nav-logo">Transylvanian Forge</a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#services">Ce Realizăm</a></li>
+      <li><a href="../index.html#about">Atelier</a></li>
+      <li><a href="../index.html#features">De Ce Noi</a></li>
+      <li><a href="../index.html#contact" class="nav-cta">Cere Ofertă</a></li>
+    </ul>
+
+    <div class="nav-toggle" id="navToggle" aria-label="Meniu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
 
   <!-- Back buttons -->
   <div class="back-wrapper">
-      <a href="../index.html" class="back-btn">← Înapoi la Pagina Principală</a>
+    <a href="../index.html" class="back-btn">← Înapoi la Pagina Principală</a>
   </div>
 
   <div class="page-wrapper">
@@ -25,13 +42,13 @@
         <form id="contactForm" action="https://formspree.io/f/xyknvwge" method="POST">
 
           <div class="form-row">
-              <input type="text" name="name" placeholder="Nume" required>
-              <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="name" placeholder="Nume" required>
+            <input type="email" name="email" placeholder="Email" required>
           </div>
 
           <div class="form-row">
-              <input type="text" name="phone" placeholder="Telefon">
-              <input type="text" name="subject" placeholder="Subiect">
+            <input type="text" name="phone" placeholder="Telefon">
+            <input type="text" name="subject" placeholder="Subiect">
           </div>
 
           <textarea name="message" placeholder="Mesajul tău" required></textarea>
@@ -42,9 +59,9 @@
         <!-- Success Popup -->
         <div id="successPopup" class="success-popup">
           <div class="popup-content">
-              <h3>Mesaj trimis!</h3>
-              <p>Îți mulțumim! Te vom contacta în curând.</p>
-              <button id="closePopup" class="btn btn-primary">Închide</button>
+            <h3>Mesaj trimis!</h3>
+            <p>Îți mulțumim! Te vom contacta în curând.</p>
+            <button id="closePopup" class="btn btn-primary">Închide</button>
           </div>
         </div>
 
@@ -54,13 +71,13 @@
   </div>
 
   <!-- JS for validation + popup -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("contactForm");
-    const popup = document.querySelector(".success-popup");
-    const closeBtn = document.getElementById("closePopup");
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("contactForm");
+      const popup = document.querySelector(".success-popup");
+      const closeBtn = document.getElementById("closePopup");
 
-    form.addEventListener("submit", (e) => {
+      form.addEventListener("submit", (e) => {
         e.preventDefault(); // stop page reload
 
         // Show popup
@@ -68,29 +85,107 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Reset form fields
         form.reset();
-    });
+      });
 
-    // Close popup
-    closeBtn.addEventListener("click", () => {
+      // Close popup
+      closeBtn.addEventListener("click", () => {
         popup.style.display = "none";
-    });
+      });
 
-    // Close popup when clicking outside the box
-    popup.addEventListener("click", (e) => {
+      // Close popup when clicking outside the box
+      popup.addEventListener("click", (e) => {
         if (e.target === popup) {
-            popup.style.display = "none";
+          popup.style.display = "none";
         }
+      });
     });
-});
-</script>
-<div id="footer-include"></div>
-<script>
-  fetch("../includes/footer.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("footer-include").innerHTML = data;
-    });
-</script>
-</body>
-</html>
+  </script>
+  <div id="footer-include"></div>
+  <script>
+    // Footer include with basic error handling
+    fetch("../includes/footer.html")
+      .then(r => r.ok ? r.text() : "")
+      .then(html => {
+        if (html) {
+          const mount = document.getElementById("footer-include");
+          if (mount) mount.innerHTML = html;
+        }
+      });
 
+    // Nav, mobile toggle, scroll-reveal
+    document.addEventListener("DOMContentLoaded", () => {
+      const nav = document.getElementById('siteNav');
+      if (nav) {
+        window.addEventListener('scroll', () => {
+          nav.classList.toggle('scrolled', window.scrollY > 40);
+        });
+      }
+
+      const toggle = document.getElementById('navToggle');
+      const links = document.getElementById('navLinks');
+      if (toggle && links) {
+        toggle.addEventListener('click', () => links.classList.toggle('open'));
+        links.querySelectorAll('a').forEach(a => {
+          a.addEventListener('click', () => links.classList.remove('open'));
+        });
+      }
+
+      const reveals = document.querySelectorAll('.reveal');
+      if (reveals.length) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              e.target.classList.add('visible');
+              observer.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(el => observer.observe(el));
+      }
+
+      // Smooth scroll for internal anchors
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', function (e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      // Contact form (optional: only if present)
+      const form = document.getElementById("contactForm");
+      if (form) {
+        form.addEventListener("submit", async function (e) {
+          e.preventDefault();
+          if (!form.name.value.trim() || !form.email.value.trim() || !form.message.value.trim()) {
+            alert("Te rugăm să completezi toate câmpurile obligatorii.");
+            return;
+          }
+          const response = await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: { "Accept": "application/json" }
+          });
+          if (response.ok) {
+            const popup = document.getElementById("successPopup");
+            if (popup) popup.style.display = "flex";
+            form.reset();
+          } else {
+            alert("A apărut o eroare. Te rugăm să încerci din nou.");
+          }
+        });
+        const closeBtn = document.getElementById("closePopup");
+        if (closeBtn) {
+          closeBtn.addEventListener("click", function () {
+            const popup = document.getElementById("successPopup");
+            if (popup) popup.style.display = "none";
+          });
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
